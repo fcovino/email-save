@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email Save</title>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <script type="module" crossorigin src="./assets/taskpane-Dh2pegQr.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/sites-DbiJlJ6g.js">
+  <link rel="stylesheet" crossorigin href="./assets/taskpane-D9fWTg20.css">
+</head>
+<body>
+  <div id="app">
+    <div id="error" class="banner" role="alert" hidden></div>
+    <div id="info" class="banner info" role="status" hidden></div>
+
+    <!-- Vista principale -->
+    <main id="view-main">
+      <header>
+        <h1 data-i18n="appTitle">Email Save</h1>
+        <p id="subject" class="muted"></p>
+      </header>
+
+      <section>
+        <h2 data-i18n="attachments">Allegati</h2>
+        <ul id="attachments" class="plain"></ul>
+        <p id="no-attachments" class="muted" hidden data-i18n="noAttachments">Questa e-mail non ha allegati.</p>
+      </section>
+
+      <section>
+        <h2 data-i18n="destination">Destinazione</h2>
+        <div id="chips" class="chips"></div>
+        <div class="dest">
+          <span id="dest-label" class="dest-label empty" data-i18n="noFolder">Nessuna cartella scelta</span>
+          <button id="fav" class="icon" disabled>☆</button>
+        </div>
+        <button id="change" class="secondary" data-i18n="chooseFolder">Scegli cartella…</button>
+      </section>
+
+      <section>
+        <label class="field"><span data-i18n="ifExists">Se il file esiste già</span>
+          <select id="conflict">
+            <option value="rename" data-i18n="conflictRename">Rinomina il nuovo file</option>
+            <option value="replace" data-i18n="conflictReplace">Sostituisci (nuova versione)</option>
+            <option value="fail" data-i18n="conflictFail">Non salvare</option>
+          </select>
+        </label>
+      </section>
+
+      <button id="save" class="primary" disabled data-i18n="save">Salva</button>
+      <ul id="results" class="plain results"></ul>
+    </main>
+
+    <!-- Selettore compatto: ripiego se il popup non è disponibile -->
+    <main id="view-browse" hidden>
+      <nav id="breadcrumb" class="breadcrumb" aria-label="Percorso" data-i18n-aria="ariaPath"></nav>
+      <input id="search" type="search" data-i18n-placeholder="searchSitePlaceholder" placeholder="Cerca sito SharePoint…" hidden />
+      <p id="browse-status" class="muted" hidden></p>
+      <ul id="browse-list" class="plain browse"></ul>
+
+      <form id="newfolder-form" class="inline-form" hidden>
+        <input id="newfolder-name" type="text" data-i18n-placeholder="newFolderName" placeholder="Nome nuova cartella" maxlength="120" />
+        <button type="submit" class="secondary" data-i18n="create">Crea</button>
+      </form>
+
+      <div class="actions">
+        <button id="newfolder" class="secondary" hidden data-i18n="newFolder">Nuova cartella</button>
+        <button id="choose" class="primary" hidden data-i18n="chooseThisFolder">Scegli questa cartella</button>
+        <button id="cancel" class="secondary" data-i18n="cancel">Annulla</button>
+      </div>
+    </main>
+
+    <p class="powered">Powered by COVINO &amp; Partners - <a href="https://www.covino.partners" target="_blank" rel="noopener noreferrer">www.covino.partners</a> - <a href="https://www.vaifood.it" target="_blank" rel="noopener noreferrer">www.vaifood.it</a> - <a href="https://www.edelton.it" target="_blank" rel="noopener noreferrer">www.edelton.it</a></p>
+  </div>
+</body>
+</html>

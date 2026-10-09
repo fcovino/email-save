@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email Save</title>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <script type="module" crossorigin src="./assets/dialog-DkdMnEmz.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/sites-DbiJlJ6g.js">
+  <link rel="stylesheet" crossorigin href="./assets/dialog-CHEat47e.css">
+</head>
+<body>
+  <div class="dialog">
+    <header class="dlg-head">
+      <div class="titles">
+        <h1 data-i18n="dialogTitle">Scegli dove salvare</h1>
+        <p id="dlg-saving" class="muted"></p>
+      </div>
+      <button id="dlg-x" class="x" type="button" data-i18n-title="close" data-i18n-aria="close" title="Chiudi" aria-label="Chiudi">×</button>
+    </header>
+    <div id="dlg-error" class="banner" role="alert" hidden></div>
+
+    <div class="dlg-body">
+      <!-- Colonna sinistra: scelta del sito -->
+      <section class="pane" aria-labelledby="h-sites">
+        <h2 id="h-sites" data-i18n="sites">Siti SharePoint</h2>
+        <input id="site-search" type="search" data-i18n-placeholder="searchSites" placeholder="Cerca siti per nome o indirizzo…" autocomplete="off" />
+        <div class="seg" role="tablist">
+          <button type="button" role="tab" data-scope="recent" data-i18n="scopeRecent">Recenti</button>
+          <button type="button" role="tab" data-scope="followed" data-i18n="scopeFollowed">Seguiti</button>
+          <button type="button" role="tab" data-scope="all" data-i18n="scopeAll">Tutti</button>
+        </div>
+        <div class="filters-row">
+          <label><span data-i18n="sortLabel">Ordina per</span>
+            <select id="site-sort">
+              <option value="name" data-i18n="sortName">Nome</option>
+              <option value="modified" data-i18n="sortModified">Ultima modifica</option>
+            </select>
+          </label>
+          <span id="site-count" class="count"></span>
+        </div>
+        <div class="pinned">
+          <button id="pick-onedrive" class="row" type="button">
+            <span class="ico">🗂️</span>
+            <span class="txt"><span class="name" data-i18n="oneDrive">OneDrive personale</span></span>
+          </button>
+        </div>
+        <ul id="site-list" class="plain scroll"></ul>
+      </section>
+
+      <!-- Colonna destra: libreria e cartelle -->
+      <section class="pane" aria-label="Cartelle" data-i18n-aria="ariaFolders">
+        <div id="loc-empty" class="placeholder" data-i18n="pickSiteHint">Scegli un sito a sinistra per vedere le sue cartelle.</div>
+        <div id="loc" class="loc" hidden>
+          <div class="loc-head">
+            <span id="loc-site" class="site"></span>
+            <label id="lib-wrap" hidden>
+              <span data-i18n="library">Libreria</span>
+              <select id="library"></select>
+            </label>
+          </div>
+          <nav id="crumbs" class="breadcrumb" aria-label="Percorso" data-i18n-aria="ariaPath"></nav>
+          <div class="tools">
+            <input id="folder-filter" type="search" data-i18n-placeholder="filterFolders" placeholder="Filtra cartelle…" autocomplete="off" />
+            <button id="newfolder-toggle" class="secondary" type="button" data-i18n="newFolder">Nuova cartella</button>
+          </div>
+          <form id="newfolder-form" class="inline-form" hidden>
+            <input id="newfolder-name" type="text" data-i18n-placeholder="newFolderName" placeholder="Nome nuova cartella" maxlength="120" />
+            <button class="secondary" type="submit" data-i18n="create">Crea</button>
+          </form>
+          <ul id="folder-list" class="plain scroll"></ul>
+        </div>
+      </section>
+    </div>
+
+    <footer class="dlg-foot">
+      <button id="dlg-fav" class="icon" type="button" disabled>☆</button>
+      <div class="dest">
+        <span class="lbl" data-i18n="savingTo">Salva in:</span>
+        <span id="dest-val" class="val empty">—</span>
+      </div>
+      <button id="dlg-cancel" class="secondary" type="button" data-i18n="cancel">Annulla</button>
+      <button id="dlg-choose" class="primary" type="button" data-i18n="selectFolder" disabled>Seleziona questa cartella</button>
+    </footer>
+    <p class="powered">Powered by COVINO &amp; Partners - <a href="https://www.covino.partners" target="_blank" rel="noopener noreferrer">www.covino.partners</a> - <a href="https://www.vaifood.it" target="_blank" rel="noopener noreferrer">www.vaifood.it</a> - <a href="https://www.edelton.it" target="_blank" rel="noopener noreferrer">www.edelton.it</a></p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Modello del manifest: non modificare manifest.xml a mano, si genera con
+    npm run manifest:dev   (versione per provare in locale)
+    npm run release        (versione per la pubblicazione, usa BASE_URL)
+  I segnaposto a doppia graffa li sostituisce scripts/build-manifest.mjs.
+-->
+<OfficeApp
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
+  xsi:type="MailApp">
+
+  <Id>b64b22f6-9d8b-4693-acdb-cb742bc2545a</Id>
+  <Version>1.1.0.0</Version>
+  <ProviderName>COVINO &amp; Partners STP s.r.l.</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+
+  <DisplayName DefaultValue="Email Save"/>
+  <Description DefaultValue="Email Save saves email attachments to SharePoint or OneDrive in two clicks. Pick the site, library and folder in a large window with search and filters. No downloads.">
+    <Override Locale="it-IT" Value="Email Save salva gli allegati delle e-mail in SharePoint o OneDrive con due clic. Scegli sito, libreria e cartella in una finestra grande con ricerca e filtri. Senza scaricare i file."/>
+  </Description>
+
+  <IconUrl DefaultValue="https://fcovino.github.io/email-save/assets/icon-64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://fcovino.github.io/email-save/assets/icon-128.png"/>
+  <SupportUrl DefaultValue="https://fcovino.github.io/email-save/support.html"/>
+
+  <AppDomains>
+    <AppDomain>https://login.microsoftonline.com</AppDomain>
+    <AppDomain>https://graph.microsoft.com</AppDomain>
+  </AppDomains>
+
+  <Hosts>
+    <Host Name="Mailbox"/>
+  </Hosts>
+
+  <Requirements>
+    <Sets>
+      <Set Name="Mailbox" MinVersion="1.8"/>
+    </Sets>
+  </Requirements>
+
+  <FormSettings>
+    <Form xsi:type="ItemRead">
+      <DesktopSettings>
+        <SourceLocation DefaultValue="https://fcovino.github.io/email-save/taskpane.html"/>
+        <RequestedHeight>320</RequestedHeight>
+      </DesktopSettings>
+    </Form>
+  </FormSettings>
+
+  <!-- ReadItem basta: gli allegati si leggono con Office.js, senza Mail.Read su Graph -->
+  <Permissions>ReadItem</Permissions>
+
+  <Rule xsi:type="RuleCollection" Mode="Or">
+    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read"/>
+  </Rule>
+
+  <DisableEntityHighlighting>false</DisableEntityHighlighting>
+
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
+      <Requirements>
+        <bt:Sets DefaultMinVersion="1.8">
+          <bt:Set Name="Mailbox"/>
+        </bt:Sets>
+      </Requirements>
+
+      <Hosts>
+        <Host xsi:type="MailHost">
+          <DesktopFormFactor>
+            <FunctionFile resid="Commands.Url"/>
+
+            <ExtensionPoint xsi:type="MessageReadCommandSurface">
+              <OfficeTab id="TabDefault">
+                <Group id="msgReadGroup">
+                  <Label resid="Group.Label"/>
+                  <Control xsi:type="Button" id="msgReadOpenPaneButton">
+                    <Label resid="Button.Label"/>
+                    <Supertip>
+                      <Title resid="Button.Label"/>
+                      <Description resid="Button.Tip"/>
+                    </Supertip>
+                    <Icon>
+                      <bt:Image size="16" resid="Icon.16x16"/>
+                      <bt:Image size="32" resid="Icon.32x32"/>
+                      <bt:Image size="80" resid="Icon.80x80"/>
+                    </Icon>
+                    <Action xsi:type="ShowTaskpane">
+                      <SourceLocation resid="Taskpane.Url"/>
+                      <SupportsPinning>true</SupportsPinning>
+                    </Action>
+                  </Control>
+                </Group>
+              </OfficeTab>
+            </ExtensionPoint>
+          </DesktopFormFactor>
+        </Host>
+      </Hosts>
+
+      <Resources>
+        <bt:Images>
+          <bt:Image id="Icon.16x16" DefaultValue="https://fcovino.github.io/email-save/assets/icon-16.png"/>
+          <bt:Image id="Icon.32x32" DefaultValue="https://fcovino.github.io/email-save/assets/icon-32.png"/>
+          <bt:Image id="Icon.80x80" DefaultValue="https://fcovino.github.io/email-save/assets/icon-80.png"/>
+        </bt:Images>
+        <bt:Urls>
+          <bt:Url id="Commands.Url" DefaultValue="https://fcovino.github.io/email-save/commands.html"/>
+          <bt:Url id="Taskpane.Url" DefaultValue="https://fcovino.github.io/email-save/taskpane.html"/>
+        </bt:Urls>
+        <bt:ShortStrings>
+          <bt:String id="Group.Label" DefaultValue="Email Save"/>
+          <bt:String id="Button.Label" DefaultValue="Save to SharePoint">
+            <bt:Override Locale="it-IT" Value="Salva in SharePoint"/>
+          </bt:String>
+        </bt:ShortStrings>
+        <bt:LongStrings>
+          <bt:String id="Button.Tip" DefaultValue="Save this email's attachments to SharePoint or OneDrive, choosing the site and folder. Powered by COVINO &amp; Partners - www.covino.partners - www.vaifood.it - www.edelton.it">
+            <bt:Override Locale="it-IT" Value="Salva gli allegati di questa e-mail in SharePoint o OneDrive, scegliendo sito e cartella. Powered by COVINO &amp; Partners - www.covino.partners - www.vaifood.it - www.edelton.it"/>
+          </bt:String>
+        </bt:LongStrings>
+      </Resources>
+    </VersionOverrides>
+  </VersionOverrides>
+</OfficeApp>

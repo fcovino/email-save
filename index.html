@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="it" data-lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email Save · Salva gli allegati di Outlook in SharePoint</title>
+  <meta name="description" content="Email Save, componente aggiuntivo gratuito per Outlook: salva gli allegati in SharePoint o OneDrive scegliendo sito e cartella in una finestra grande. / Email Save, a free Outlook add-in to save attachments to SharePoint or OneDrive." />
+  <link rel="icon" href="./assets/icon-32.png" />
+  <link rel="stylesheet" href="./site.css" />
+  <script src="./site.js"></script>
+</head>
+<body>
+<main>
+  <div class="bar">
+    <strong>COVINO &amp; Partners</strong>
+    <nav>
+      <a href="./support.html"><span lang="it">Supporto</span><span lang="en">Support</span></a>
+      <a href="./privacy.html">Privacy</a>
+      <a href="./terms.html"><span lang="it">Termini</span><span lang="en">Terms</span></a>
+      <button id="lang" type="button" aria-label="Italiano / English">IT · EN</button>
+    </nav>
+  </div>
+
+  <!-- ===================== ITALIANO ===================== -->
+  <div lang="it">
+    <div class="hero">
+      <img src="./assets/icon-128.png" alt="" />
+      <div>
+        <h1>Email Save</h1>
+        <p class="lead">Il componente aggiuntivo gratuito per Outlook che salva gli allegati in SharePoint o OneDrive con due clic. Scegli sito, libreria e cartella in una finestra grande con ricerca e filtri.</p>
+      </div>
+    </div>
+    <p><a id="mp-it" class="btn" href="#" hidden>Ottieni dal Microsoft Marketplace</a></p>
+
+    <h2>Cosa fa</h2>
+    <ul>
+      <li><strong>Finestra grande di scelta</strong>: cerca i siti SharePoint per nome o indirizzo, filtra tra <em>Recenti</em>, <em>Seguiti</em> e <em>Tutti</em>, ordina per nome o ultima modifica.</li>
+      <li>Sceglie libreria e cartella, con filtro, e crea nuove cartelle al volo.</li>
+      <li>Preferiti, cartelle recenti e <strong>suggerimento automatico</strong> della cartella già usata per lo stesso mittente o azienda.</li>
+      <li>Salva più allegati insieme, anche file grandi. Se il file esiste: rinomina, sostituisci (nuova versione) o non salvare.</li>
+      <li>Restituisce il link al file salvato, pronto da copiare.</li>
+      <li>I file vanno direttamente dal tuo Outlook al tuo Microsoft 365: nessun server nostro in mezzo.</li>
+    </ul>
+
+    <h2>Come si installa</h2>
+    <div class="card">
+      <h3>1. Microsoft Marketplace (consigliato)</h3>
+      <p>Apri la scheda sul Marketplace e fai clic su <strong>Ottieni</strong>. In Outlook, nella barra del messaggio, compare il gruppo <strong>Email Save</strong> con il pulsante <strong>Salva in SharePoint</strong>.</p>
+    </div>
+    <div class="card">
+      <h3>2. Per tutta l'organizzazione (amministratore)</h3>
+      <p>Nell'<em>interfaccia di amministrazione di Microsoft 365</em>: <em>Impostazioni → App integrate → Carica app personalizzate</em>, scegli <em>Add-in di Office</em>, carica <a href="./manifest.xml" download>manifest.xml</a>, scegli gli utenti e distribuisci. I nomi dei menu possono variare con gli aggiornamenti di Microsoft.</p>
+    </div>
+    <div class="card">
+      <h3>3. Solo per te (senza Marketplace)</h3>
+      <p>Scarica <a href="./manifest.xml" download>manifest.xml</a>, apri <a href="https://aka.ms/olksideload">aka.ms/olksideload</a>, scegli <em>Aggiungi un componente aggiuntivo → Aggiungi da file</em>. Se l'opzione non c'è, l'amministratore ha limitato i componenti personalizzati.</p>
+    </div>
+    <p><strong>Primo accesso.</strong> Il componente chiede di accedere con l'account Microsoft 365 e di consentire l'accesso ai file. In molte organizzazioni la prima approvazione spetta a un amministratore: vedi <a href="./support.html">Supporto</a>.</p>
+    <p class="small"><strong>Requisiti:</strong> account Microsoft 365 con Exchange Online, OneDrive o SharePoint; Outlook sul web, nuovo Outlook o Outlook classico per Windows.</p>
+  </div>
+
+  <!-- ===================== ENGLISH ===================== -->
+  <div lang="en">
+    <div class="hero">
+      <img src="./assets/icon-128.png" alt="" />
+      <div>
+        <h1>Email Save</h1>
+        <p class="lead">The free Outlook add-in that saves attachments to SharePoint or OneDrive in two clicks. Pick the site, library and folder in a large window with search and filters.</p>
+      </div>
+    </div>
+    <p><a id="mp-en" class="btn" href="#" hidden>Get it from Microsoft Marketplace</a></p>
+
+    <h2>What it does</h2>
+    <ul>
+      <li><strong>Large picker window</strong>: search SharePoint sites by name or address, filter by <em>Recent</em>, <em>Following</em> and <em>All</em>, sort by name or last modified.</li>
+      <li>Pick the library and folder, with a filter, and create new folders on the spot.</li>
+      <li>Favorites, recent folders and an <strong>automatic suggestion</strong> of the folder you already used for the same sender or company.</li>
+      <li>Saves several attachments at once, including large files. If the file exists: rename, replace (new version) or don't save.</li>
+      <li>Gives you the link to the saved file, ready to copy.</li>
+      <li>Files go straight from your Outlook to your Microsoft 365: no server of ours in between.</li>
+    </ul>
+
+    <h2>How to install</h2>
+    <div class="card">
+      <h3>1. Microsoft Marketplace (recommended)</h3>
+      <p>Open the Marketplace listing and click <strong>Get it now</strong>. In Outlook, the message toolbar shows the <strong>Email Save</strong> group with the <strong>Save to SharePoint</strong> button.</p>
+    </div>
+    <div class="card">
+      <h3>2. For your whole organization (administrator)</h3>
+      <p>In the <em>Microsoft 365 admin center</em>: <em>Settings → Integrated apps → Upload custom apps</em>, choose <em>Office Add-in</em>, upload <a href="./manifest.xml" download>manifest.xml</a>, pick the users and deploy. Menu names may change as Microsoft updates the admin center.</p>
+    </div>
+    <div class="card">
+      <h3>3. Just for you (without the Marketplace)</h3>
+      <p>Download <a href="./manifest.xml" download>manifest.xml</a>, open <a href="https://aka.ms/olksideload">aka.ms/olksideload</a>, choose <em>Add a custom add-in → Add from file</em>. If the option is missing, your administrator has restricted custom add-ins.</p>
+    </div>
+    <p><strong>First sign-in.</strong> The add-in asks you to sign in with your Microsoft 365 account and to allow access to your files. In many organizations the first approval has to come from an administrator: see <a href="./support.html">Support</a>.</p>
+    <p class="small"><strong>Requirements:</strong> a Microsoft 365 account with Exchange Online and OneDrive or SharePoint; Outlook on the web, new Outlook or classic Outlook for Windows.</p>
+  </div>
+
+  <footer>© COVINO &amp; Partners STP s.r.l. · <a href="./privacy.html">Privacy</a> · <a href="./terms.html"><span lang="it">Termini</span><span lang="en">Terms</span></a> · <a href="./support.html"><span lang="it">Supporto</span><span lang="en">Support</span></a></footer>
+</main>
+<script>
+  // Dopo la pubblicazione sul Marketplace incolla qui il link della scheda: il pulsante compare da solo.
+  var MARKETPLACE_URL = "";
+  if (MARKETPLACE_URL) {
+    ["mp-it", "mp-en"].forEach(function (id) {
+      var a = document.getElementById(id);
+      a.href = MARKETPLACE_URL;
+      a.hidden = false;
+    });
+  }
+</script>
+</body>
+</html>

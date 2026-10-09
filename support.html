@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="it" data-lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supporto · Email Save</title>
+  <link rel="icon" href="./assets/icon-32.png" />
+  <link rel="stylesheet" href="./site.css" />
+  <script src="./site.js"></script>
+  <!-- config.js lo genera la build (contiene l'ID applicazione, che non è un segreto); in locale può mancare. -->
+  <script src="./config.js"></script>
+</head>
+<body>
+<main>
+  <div class="bar">
+    <a href="./index.html">← Email Save</a>
+    <nav>
+      <a href="./privacy.html">Privacy</a>
+      <a href="./terms.html"><span lang="it">Termini</span><span lang="en">Terms</span></a>
+      <button id="lang" type="button" aria-label="Italiano / English">IT · EN</button>
+    </nav>
+  </div>
+
+  <div id="consent-ok" class="banner ok" role="status" hidden>
+    <span lang="it"><strong>Fatto.</strong> L'amministratore ha approvato il componente per l'organizzazione: gli utenti possono usarlo subito.</span>
+    <span lang="en"><strong>Done.</strong> The administrator approved the add-in for the organization: users can start using it right away.</span>
+  </div>
+  <div id="consent-ko" class="banner ko" role="alert" hidden>
+    <span lang="it"><strong>Approvazione non completata.</strong></span>
+    <span lang="en"><strong>Approval not completed.</strong></span>
+    <span id="consent-err"></span>
+  </div>
+
+  <!-- ===================== ITALIANO ===================== -->
+  <div lang="it">
+    <h1>Supporto</h1>
+    <p class="lead">Risposte alle domande più frequenti. Se non trovi la soluzione, scrivi a <span class="todo">[DA COMPILARE: e-mail supporto]</span> indicando: versione di Outlook (sul web, nuovo Outlook o classico), il testo dell'errore e l'ora.</p>
+
+    <h2>«Serve l'approvazione dell'amministratore»</h2>
+    <p>Il componente agisce con i tuoi permessi su OneDrive e SharePoint e per questo chiede, al primo accesso, di consentire l'accesso ai file. Molte organizzazioni consentono questa approvazione solo a un amministratore. Succede una volta sola per tutta l'organizzazione.</p>
+    <div id="consent-it" class="card" hidden>
+      <h3>Per l'amministratore</h3>
+      <p>Accedi con un account amministratore globale (o amministratore di applicazioni) e apri questo link: <a class="consent-link" href="#">Approva «Email Save» per l'organizzazione</a>.</p>
+      <p class="small">Permessi richiesti (delegati, cioè sempre limitati a ciò che l'utente già può fare): <code>User.Read</code>, <code>Files.ReadWrite.All</code>, <code>Sites.Read.All</code>. Il componente non legge la posta tramite Graph e non ha accesso senza un utente connesso. Puoi revocare l'accesso in Microsoft Entra ID → Applicazioni aziendali.</p>
+    </div>
+
+    <h2>Non vedo il pulsante «Salva in SharePoint»</h2>
+    <ul>
+      <li>Apri un messaggio ricevuto: il pulsante compare nei messaggi letti, non nelle bozze.</li>
+      <li>Cerca il gruppo <em>Email Save</em> nella barra, oppure il menu <em>…</em> / <em>App</em> del messaggio.</li>
+      <li>Se il componente è stato assegnato dall'amministratore, può servire fino a 24 ore perché compaia. Riavvia Outlook.</li>
+      <li>Outlook sul web: se il tuo account non è Microsoft 365 con Exchange Online (per esempio un indirizzo IMAP collegato), i componenti non sono disponibili.</li>
+    </ul>
+
+    <h2>La finestra grande non si apre</h2>
+    <p>Il componente prova ad aprire la finestra di scelta di sito e cartella. Se la tua versione di Outlook o il browser la bloccano (blocco popup, versioni molto vecchie), usa in automatico un selettore compatto dentro il pannello laterale: funziona allo stesso modo. Prova ad aggiornare Outlook o a consentire le finestre per il sito di Outlook.</p>
+
+    <h2>Non trovo il mio sito SharePoint</h2>
+    <ul>
+      <li>Nella scheda <em>Tutti</em> digita parte del nome o dell'indirizzo: la ricerca interroga tutti i siti a cui hai accesso.</li>
+      <li>Per vederlo in <em>Seguiti</em>, apri il sito in SharePoint e scegli <em>Segui</em>.</li>
+      <li>I siti appena creati possono impiegare qualche minuto per comparire nella ricerca.</li>
+      <li>I siti a cui non hai accesso non vengono elencati.</li>
+    </ul>
+
+    <h2>«Accesso negato»</h2>
+    <p>Non hai il permesso di aggiungere file in quella libreria (per esempio sei solo visitatore). Scegli un'altra cartella o chiedi al proprietario del sito di darti i permessi di modifica.</p>
+
+    <h2>Il file esiste già</h2>
+    <p>Prima di salvare scegli cosa fare: <em>rinomina</em> (aggiunge un numero al nome), <em>sostituisci</em> (crea una nuova versione del file esistente) oppure <em>non salvare</em>.</p>
+
+    <h2>Revocare l'accesso</h2>
+    <p>Da <a href="https://myapps.microsoft.com">myapps.microsoft.com</a> (utente) o da Microsoft Entra ID → Applicazioni aziendali (amministratore). Preferiti e cartelle recenti restano nelle impostazioni del tuo account Outlook: i preferiti si tolgono dal pannello con la stella; la copia locale si cancella eliminando i dati del sito dal browser.</p>
+  </div>
+
+  <!-- ===================== ENGLISH ===================== -->
+  <div lang="en">
+    <h1>Support</h1>
+    <p class="lead">Answers to the most common questions. If you can't find a fix, write to <span class="todo">[DA COMPILARE: support email]</span> with your Outlook version (web, new Outlook or classic), the error text and the time.</p>
+
+    <h2>“Admin approval required”</h2>
+    <p>The add-in acts with your own permissions on OneDrive and SharePoint, so at first sign-in it asks you to allow access to files. Many organizations let only an administrator approve this. It happens once for the whole organization.</p>
+    <div id="consent-en" class="card" hidden>
+      <h3>For the administrator</h3>
+      <p>Sign in with a Global Administrator (or Application Administrator) account and open this link: <a class="consent-link" href="#">Approve “Email Save” for the organization</a>.</p>
+      <p class="small">Permissions requested (delegated, meaning always limited to what the user can already do): <code>User.Read</code>, <code>Files.ReadWrite.All</code>, <code>Sites.Read.All</code>. The add-in does not read mail through Graph and has no access without a signed-in user. You can revoke access in Microsoft Entra ID → Enterprise applications.</p>
+    </div>
+
+    <h2>I can't see the “Save to SharePoint” button</h2>
+    <ul>
+      <li>Open a received message: the button appears on read messages, not on drafts.</li>
+      <li>Look for the <em>Email Save</em> group in the ribbon, or the message's <em>…</em> / <em>Apps</em> menu.</li>
+      <li>If an administrator assigned the add-in, it can take up to 24 hours to appear. Restart Outlook.</li>
+      <li>Outlook on the web: if your account is not Microsoft 365 with Exchange Online (for example a linked IMAP address), add-ins are not available.</li>
+    </ul>
+
+    <h2>The large window does not open</h2>
+    <p>The add-in tries to open the site and folder picker window. If your Outlook version or browser blocks it (popup blocker, very old versions), it automatically uses a compact picker inside the side pane: it works the same way. Try updating Outlook or allowing popups for the Outlook site.</p>
+
+    <h2>I can't find my SharePoint site</h2>
+    <ul>
+      <li>In the <em>All</em> tab type part of the name or address: the search queries every site you can access.</li>
+      <li>To see it under <em>Following</em>, open the site in SharePoint and choose <em>Follow</em>.</li>
+      <li>Newly created sites can take a few minutes to show up in search.</li>
+      <li>Sites you have no access to are not listed.</li>
+    </ul>
+
+    <h2>“Access denied”</h2>
+    <p>You don't have permission to add files to that library (for example you are a visitor). Pick another folder or ask the site owner for edit permission.</p>
+
+    <h2>The file already exists</h2>
+    <p>Before saving, choose what to do: <em>rename</em> (adds a number to the name), <em>replace</em> (creates a new version of the existing file) or <em>don't save</em>.</p>
+
+    <h2>Revoking access</h2>
+    <p>From <a href="https://myapps.microsoft.com">myapps.microsoft.com</a> (user) or Microsoft Entra ID → Enterprise applications (administrator). Favorites and recent folders stay in your Outlook account settings: remove favorites from the pane with the star; the local copy is deleted by clearing the site data in your browser.</p>
+  </div>
+
+  <footer>© COVINO &amp; Partners STP s.r.l. · <a href="./index.html">Home</a> · <a href="./privacy.html">Privacy</a> · <a href="./terms.html"><span lang="it">Termini</span><span lang="en">Terms</span></a></footer>
+</main>
+<script>
+  (function () {
+    var q = new URLSearchParams(location.search);
+    // Ritorno dal link di consenso amministratore (Microsoft aggiunge admin_consent=True oppure error=...).
+    if ((q.get("admin_consent") || "").toLowerCase() === "true") {
+      document.getElementById("consent-ok").hidden = false;
+    } else if (q.get("error")) {
+      document.getElementById("consent-ko").hidden = false;
+      document.getElementById("consent-err").textContent = q.get("error_description") || q.get("error");
+    }
+    // Il link di consenso si costruisce solo se la build ha pubblicato l'ID applicazione.
+    var cfg = window.ADDIN_CONFIG || {};
+    if (cfg.clientId) {
+      var url = "https://login.microsoftonline.com/organizations/v2.0/adminconsent" +
+        "?client_id=" + encodeURIComponent(cfg.clientId) +
+        "&scope=" + encodeURIComponent("https://graph.microsoft.com/.default") +
+        "&redirect_uri=" + encodeURIComponent(location.origin + location.pathname);
+      Array.prototype.forEach.call(document.querySelectorAll("a.consent-link"), function (a) { a.href = url; });
+      ["consent-it", "consent-en"].forEach(function (id) { document.getElementById(id).hidden = false; });
+    }
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="it" data-lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy · Email Save</title>
+  <link rel="icon" href="./assets/icon-32.png" />
+  <link rel="stylesheet" href="./site.css" />
+  <script src="./site.js"></script>
+</head>
+<body>
+<!-- Testo da far verificare a un consulente legale prima della pubblicazione; compilare i campi evidenziati. -->
+<main>
+  <div class="bar">
+    <a href="./index.html">← Email Save</a>
+    <nav>
+      <a href="./support.html"><span lang="it">Supporto</span><span lang="en">Support</span></a>
+      <a href="./terms.html"><span lang="it">Termini</span><span lang="en">Terms</span></a>
+      <button id="lang" type="button" aria-label="Italiano / English">IT · EN</button>
+    </nav>
+  </div>
+
+  <!-- ===================== ITALIANO ===================== -->
+  <div lang="it">
+    <h1>Informativa sulla privacy</h1>
+    <p class="small">Ultimo aggiornamento: 7 ottobre 2026</p>
+
+    <h2>In breve</h2>
+    <p>Email Save non raccoglie, non riceve e non conserva i tuoi dati. Gira dentro il tuo Outlook e parla direttamente con Microsoft 365: i file non passano da server nostri.</p>
+
+    <h2>Chi siamo</h2>
+    <p>COVINO &amp; Partners STP s.r.l., <span class="todo">[DA COMPILARE: sede legale, partita IVA]</span>. Contatto per la privacy: <span class="todo">[DA COMPILARE: e-mail privacy]</span>.</p>
+
+    <h2>Cosa legge il componente</h2>
+    <ul>
+      <li>Dell'e-mail aperta: oggetto, indirizzo del mittente e allegati. Il contenuto degli allegati viene letto solo per quelli che scegli di salvare, quando premi «Salva».</li>
+      <li>Da SharePoint e OneDrive: l'elenco dei siti, delle librerie e delle cartelle a cui hai già accesso.</li>
+    </ul>
+
+    <h2>Cosa fa con questi dati</h2>
+    <p>Carica gli allegati scelti nella cartella scelta, con i tuoi permessi, tramite Microsoft Graph. Se lo chiedi, crea una nuova cartella. Non li invia a nessun altro.</p>
+
+    <h2>Permessi richiesti</h2>
+    <ul>
+      <li>Microsoft Graph (delegati, cioè agisce come te): <code>User.Read</code>, <code>Files.ReadWrite.All</code>, <code>Sites.Read.All</code>.</li>
+      <li>Outlook: <code>ReadItem</code> (lettura dell'e-mail aperta).</li>
+    </ul>
+    <p>Il componente non chiede di leggere la tua casella di posta tramite Graph e non può agire senza che tu sia connesso.</p>
+
+    <h2>Cosa viene memorizzato</h2>
+    <p>Per ricordare le tue scelte, il componente salva <strong>preferiti</strong>, <strong>cartelle recenti</strong> e l'associazione <strong>mittente o dominio → cartella</strong> (nomi e identificativi delle cartelle, indirizzi e-mail e domini dei mittenti). I dati stanno nelle impostazioni del tuo account Outlook in Microsoft 365 e nella memoria locale di Outlook o del browser. Il componente conserva anche, nella memoria locale di Outlook o del browser, i token di accesso rilasciati da Microsoft per la sessione. Non riceviamo nulla di tutto questo. La copia locale si elimina cancellando i dati del sito dal browser; i preferiti si tolgono anche dal pannello, con la stella.</p>
+
+    <h2>Cookie, statistiche, pubblicità</h2>
+    <p>Nessuno di questi: niente cookie di profilazione, analytics o pubblicità. Le pagine pubbliche ricordano solo la lingua scelta nel tuo browser.</p>
+
+    <h2>Hosting e terzi</h2>
+    <p>Le pagine del componente sono pubblicate da <span class="todo">[DA COMPILARE: fornitore di hosting]</span>, che può registrare indirizzo IP e dati tecnici nei log di accesso per sicurezza e funzionamento. Il trattamento dei dati in Microsoft 365 è regolato dai termini di Microsoft e della tua organizzazione.</p>
+
+    <h2>Revocare l'accesso</h2>
+    <p>Puoi revocare il consenso dal portale «Le mie app» di Microsoft (myapps.microsoft.com). L'amministratore può farlo da Microsoft Entra ID → Applicazioni aziendali.</p>
+
+    <h2>I tuoi diritti</h2>
+    <p>Non conservando dati personali che ti riguardano, non abbiamo dati da esportare o cancellare. Per qualsiasi domanda scrivi a <span class="todo">[DA COMPILARE: e-mail privacy]</span>. Hai sempre diritto di rivolgerti al Garante per la protezione dei dati personali.</p>
+
+    <h2>Modifiche</h2>
+    <p>Se cambieremo il funzionamento in modo rilevante, aggiorneremo questa pagina e la data in alto.</p>
+  </div>
+
+  <!-- ===================== ENGLISH ===================== -->
+  <div lang="en">
+    <h1>Privacy policy</h1>
+    <p class="small">Last updated: 7 October 2026</p>
+
+    <h2>In short</h2>
+    <p>Email Save does not collect, receive or store your data. It runs inside your Outlook and talks directly to Microsoft 365: your files never go through our servers.</p>
+
+    <h2>Who we are</h2>
+    <p>COVINO &amp; Partners STP s.r.l., <span class="todo">[DA COMPILARE: registered office, VAT number]</span>. Privacy contact: <span class="todo">[DA COMPILARE: privacy email]</span>.</p>
+
+    <h2>What the add-in reads</h2>
+    <ul>
+      <li>From the open email: subject, sender address and attachments. The content of an attachment is read only for the ones you choose to save, when you press “Save”.</li>
+      <li>From SharePoint and OneDrive: the list of sites, libraries and folders you already have access to.</li>
+    </ul>
+
+    <h2>What it does with this data</h2>
+    <p>It uploads the chosen attachments to the chosen folder, with your own permissions, through Microsoft Graph. If you ask, it creates a new folder. It sends nothing to anyone else.</p>
+
+    <h2>Permissions requested</h2>
+    <ul>
+      <li>Microsoft Graph (delegated, meaning it acts as you): <code>User.Read</code>, <code>Files.ReadWrite.All</code>, <code>Sites.Read.All</code>.</li>
+      <li>Outlook: <code>ReadItem</code> (reading the open email).</li>
+    </ul>
+    <p>The add-in does not ask to read your mailbox through Graph and cannot act unless you are signed in.</p>
+
+    <h2>What is stored</h2>
+    <p>To remember your choices, the add-in stores <strong>favorites</strong>, <strong>recent folders</strong> and the <strong>sender or domain → folder</strong> association (folder names and identifiers, sender email addresses and domains). This data lives in your Outlook account settings in Microsoft 365 and in the local storage of Outlook or your browser. It also keeps, in the local storage of Outlook or your browser, the sign-in tokens Microsoft issues for the session. We receive none of this. The local copy is deleted by clearing the site data in your browser; favorites can also be removed from the pane, with the star.</p>
+
+    <h2>Cookies, analytics, advertising</h2>
+    <p>None: no profiling cookies, analytics or advertising. The public pages only remember the language you picked, in your browser.</p>
+
+    <h2>Hosting and third parties</h2>
+    <p>The add-in pages are published by <span class="todo">[DA COMPILARE: hosting provider]</span>, which may log IP addresses and technical data for security and operation. Data processing inside Microsoft 365 is governed by Microsoft's terms and your organization's.</p>
+
+    <h2>Revoking access</h2>
+    <p>You can revoke consent from Microsoft's “My Apps” portal (myapps.microsoft.com). An administrator can do it from Microsoft Entra ID → Enterprise applications.</p>
+
+    <h2>Your rights</h2>
+    <p>Because we do not keep personal data about you, there is nothing to export or delete. For any question write to <span class="todo">[DA COMPILARE: privacy email]</span>. You may always contact your data protection authority.</p>
+
+    <h2>Changes</h2>
+    <p>If we change how the add-in works in a material way, we will update this page and the date above.</p>
+  </div>
+
+  <footer>© COVINO &amp; Partners STP s.r.l. · <a href="./index.html">Home</a> · <a href="./support.html"><span lang="it">Supporto</span><span lang="en">Support</span></a></footer>
+</main>
+</body>
+</html>
