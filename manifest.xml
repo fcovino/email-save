@@ -13,13 +13,13 @@
   xsi:type="MailApp">
 
   <Id>b64b22f6-9d8b-4693-acdb-cb742bc2545a</Id>
-  <Version>1.3.0.0</Version>
+  <Version>1.3.1.0</Version>
   <ProviderName>COVINO &amp; Partners STP s.r.l.</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
 
   <DisplayName DefaultValue="Email Save"/>
-  <Description DefaultValue="Email Save saves email attachments to SharePoint or OneDrive in two clicks. Pick the site, library and folder in a large window with search and filters. No downloads.">
-    <Override Locale="it-IT" Value="Email Save salva gli allegati delle e-mail in SharePoint o OneDrive con due clic. Scegli sito, libreria e cartella in una finestra grande con ricerca e filtri. Senza scaricare i file."/>
+  <Description DefaultValue="Email Save saves email attachments to SharePoint or OneDrive in two clicks. Pick the site, library and folder with search and filters. No downloads.">
+    <Override Locale="it-IT" Value="Email Save salva gli allegati delle e-mail in SharePoint o OneDrive con due clic. Scegli sito, libreria e cartella con ricerca e filtri. Senza scaricare i file."/>
   </Description>
 
   <IconUrl DefaultValue="https://fcovino.github.io/email-save/assets/icon-64.png"/>
@@ -116,8 +116,8 @@
           </bt:String>
         </bt:ShortStrings>
         <bt:LongStrings>
-          <bt:String id="Button.Tip" DefaultValue="Save this email's attachments to SharePoint or OneDrive, choosing the site and folder. Powered by COVINO &amp; Partners - www.covino.partners - www.vaifood.it - www.edelton.it">
-            <bt:Override Locale="it-IT" Value="Salva gli allegati di questa e-mail in SharePoint o OneDrive, scegliendo sito e cartella. Powered by COVINO &amp; Partners - www.covino.partners - www.vaifood.it - www.edelton.it"/>
+          <bt:String id="Button.Tip" DefaultValue="Save this email's attachments to SharePoint or OneDrive, choosing the site and folder. Powered by COVINO &amp; Partners · www.covino.partners">
+            <bt:Override Locale="it-IT" Value="Salva gli allegati di questa e-mail in SharePoint o OneDrive, scegliendo sito e cartella. Powered by COVINO &amp; Partners · www.covino.partners"/>
           </bt:String>
         </bt:LongStrings>
       </Resources>
