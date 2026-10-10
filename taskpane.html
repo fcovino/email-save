@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Email Save</title>
   <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
-  <script type="module" crossorigin src="./assets/taskpane-Dh2pegQr.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/sites-DbiJlJ6g.js">
-  <link rel="stylesheet" crossorigin href="./assets/taskpane-D9fWTg20.css">
+  <script type="module" crossorigin src="./assets/taskpane-DQDrlz78.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/sites-B0Zx3g89.js">
+  <link rel="stylesheet" crossorigin href="./assets/taskpane-D60yUpYK.css">
 </head>
 <body>
   <div id="app">
@@ -25,6 +25,15 @@
         <h2 data-i18n="attachments">Allegati</h2>
         <ul id="attachments" class="plain"></ul>
         <p id="no-attachments" class="muted" hidden data-i18n="noAttachments">Questa e-mail non ha allegati.</p>
+        <!-- Subito sotto l'elenco: salva anche l'e-mail intera (.eml). Nasce nascosta e NON spuntata; il codice la mostra con l'e-mail aperta -->
+        <div id="eml-option" hidden>
+          <label>
+            <input type="checkbox" id="save-eml" />
+            <span class="name" data-i18n="saveEml">Salva anche il testo dell'email (.eml)</span>
+          </label>
+          <!-- Compare solo dove Outlook non sa dare l'e-mail intera (versioni più vecchie): la voce resta spenta e qui si dice perché, nella stessa riga -->
+          <p id="eml-hint" class="muted" hidden data-i18n="emlUnavailable">Non disponibile in questa versione di Outlook.</p>
+        </div>
       </section>
 
       <section>
@@ -48,13 +57,17 @@
       </section>
 
       <button id="save" class="primary" disabled data-i18n="save">Salva</button>
+      <!-- Compare dopo un salvataggio riuscito: apre nel browser la cartella dove sono finiti i file -->
+      <a id="open-folder" target="_blank" rel="noopener noreferrer" hidden data-i18n="openFolder">Apri cartella</a>
       <ul id="results" class="plain results"></ul>
+      <!-- Annuncia a chi usa uno screen reader che «Apri cartella» è comparso (il pulsante nasce nascosto e compare a salvataggio finito) -->
+      <div id="open-folder-status" class="visually-hidden" role="status"></div>
     </main>
 
     <!-- Selettore compatto: ripiego se il popup non è disponibile -->
     <main id="view-browse" hidden>
       <nav id="breadcrumb" class="breadcrumb" aria-label="Percorso" data-i18n-aria="ariaPath"></nav>
-      <input id="search" type="search" data-i18n-placeholder="searchSitePlaceholder" placeholder="Cerca sito SharePoint…" hidden />
+      <input id="search" type="search" data-i18n-placeholder="searchSitePlaceholder" placeholder="Cerca sito SharePoint…" maxlength="256" hidden />
       <p id="browse-status" class="muted" hidden></p>
       <ul id="browse-list" class="plain browse"></ul>
 

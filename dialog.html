@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Email Save</title>
   <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
-  <script type="module" crossorigin src="./assets/dialog-DkdMnEmz.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/sites-DbiJlJ6g.js">
-  <link rel="stylesheet" crossorigin href="./assets/dialog-CHEat47e.css">
+  <script type="module" crossorigin src="./assets/dialog-CfnOcJn-.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/sites-B0Zx3g89.js">
+  <link rel="stylesheet" crossorigin href="./assets/dialog-DO52SvyP.css">
 </head>
 <body>
   <div class="dialog">
@@ -24,7 +24,7 @@
       <!-- Colonna sinistra: scelta del sito -->
       <section class="pane" aria-labelledby="h-sites">
         <h2 id="h-sites" data-i18n="sites">Siti SharePoint</h2>
-        <input id="site-search" type="search" data-i18n-placeholder="searchSites" placeholder="Cerca siti per nome o indirizzo…" autocomplete="off" />
+        <input id="site-search" type="search" data-i18n-placeholder="searchSites" placeholder="Cerca siti per nome o indirizzo…" autocomplete="off" maxlength="256" />
         <div class="seg" role="tablist">
           <button type="button" role="tab" data-scope="recent" data-i18n="scopeRecent">Recenti</button>
           <button type="button" role="tab" data-scope="followed" data-i18n="scopeFollowed">Seguiti</button>
@@ -37,7 +37,7 @@
               <option value="modified" data-i18n="sortModified">Ultima modifica</option>
             </select>
           </label>
-          <span id="site-count" class="count"></span>
+          <span id="site-count" class="count" role="status"></span>
         </div>
         <div class="pinned">
           <button id="pick-onedrive" class="row" type="button">
