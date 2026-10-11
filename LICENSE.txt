@@ -1,0 +1,104 @@
+Email Save - Licenza d'uso gratuita / Free licence to use
+Copyright (c) 2026 COVINO & Partners STP s.r.l. Tutti i diritti riservati. / All rights reserved.
+Via Archimede 167, 00197 Roma (Italia) - P. IVA e C.F. / VAT no. 15039761000 - assistenza@covino.partners
+
+================================================================================
+ITALIANO (prevale in caso di differenze tra i due testi)
+================================================================================
+
+1. Titolare dei diritti
+   «Email Save» (il «Componente»: il componente aggiuntivo di Outlook, il suo codice, il nome, il logo, i testi e le pagine
+   collegate) è di COVINO & Partners STP s.r.l. (il «Titolare»). Tutti i diritti sono riservati, salvo quanto concesso
+   espressamente qui sotto.
+
+2. Licenza d'uso gratuita
+   Il Titolare ti concede una licenza gratuita, non esclusiva, non trasferibile, non sublicenziabile e revocabile per
+   installare e usare il Componente con il tuo Outlook e Microsoft 365, per te o per la tua organizzazione, anche per
+   attività professionali. Non è dovuto alcun corrispettivo.
+
+3. Cosa non è consentito
+   Senza permesso scritto del Titolare non puoi: (a) copiare il Componente, salvo le copie tecniche necessarie per usarlo;
+   (b) modificarlo, adattarlo, tradurlo o crearne opere derivate; (c) distribuirlo, pubblicarlo, ospitarlo su altri indirizzi
+   o in altri negozi di applicazioni, rivenderlo, noleggiarlo o offrirlo come servizio; (d) decompilarlo o ricavarne il codice
+   sorgente, se non nei limiti in cui la legge inderogabile lo consente; (e) rimuovere gli avvisi sui diritti; (f) usare il nome
+   «Email Save», «COVINO & Partners», il logo o altri segni del Titolare in modo da far credere a un'affiliazione o a
+   un'approvazione.
+
+4. Codice visibile, ma non libero
+   Il codice può essere reso consultabile (per esempio su GitHub) per trasparenza. Poterlo leggere non concede alcun diritto
+   oltre a quelli del punto 2: non è un software con licenza aperta.
+
+5. Componenti di terzi e marchi
+   Il Componente include librerie di terzi, in particolare @azure/msal-browser e @azure/msal-common di Microsoft Corporation
+   (licenza MIT). Restano soggette alle loro licenze, che questa licenza non modifica. Microsoft, Outlook, SharePoint, OneDrive
+   e Microsoft 365 sono marchi di Microsoft Corporation, che non è affiliata al Componente né lo approva.
+
+6. Nessuna garanzia
+   Il Componente è fornito «così com'è», senza garanzie di alcun tipo, esplicite o implicite, comprese quelle di
+   commerciabilità, idoneità a uno scopo particolare, assenza di errori o disponibilità continua.
+
+7. Limitazione di responsabilità
+   Nei limiti consentiti dalla legge, il Titolare non risponde di perdite di dati, mancati guadagni o danni indiretti derivanti
+   dall'uso o dall'impossibilità di usare il Componente. Restano ferme le responsabilità che la legge non permette di
+   escludere o limitare.
+
+8. Durata e revoca
+   La licenza dura finché il Componente è disponibile e può essere revocata dal Titolare, con effetto dal momento in cui lo
+   comunica sulla pagina dei termini d'uso. Cessa automaticamente se violi il punto 3; in tal caso devi smettere di usare il
+   Componente.
+
+9. Documenti collegati
+   Questa licenza si legge insieme ai termini d'uso e all'informativa sulla privacy del Componente:
+   https://fcovino.github.io/email-save/terms.html e https://fcovino.github.io/email-save/privacy.html
+
+10. Legge applicabile e foro
+   Legge italiana. Foro competente: Roma (Italia), salvo diversa disposizione inderogabile di legge a tutela del consumatore.
+
+================================================================================
+ENGLISH
+================================================================================
+
+1. Rights holder
+   "Email Save" (the "Add-in": the Outlook add-in, its code, name, logo, texts and related pages) belongs to COVINO & Partners
+   STP s.r.l. (the "Licensor"). All rights are reserved, except as expressly granted below.
+
+2. Free licence to use
+   The Licensor grants you a free, non-exclusive, non-transferable, non-sublicensable and revocable licence to install and use
+   the Add-in with your Outlook and Microsoft 365, for yourself or your organization, including for professional activities.
+   No fee is due.
+
+3. What is not allowed
+   Without the Licensor's written permission you may not: (a) copy the Add-in, except for the technical copies needed to use
+   it; (b) modify, adapt or translate it, or create derivative works; (c) distribute, publish, host it at other addresses or in
+   other app stores, resell, rent or offer it as a service; (d) decompile it or derive its source code, except to the extent
+   mandatory law allows; (e) remove rights notices; (f) use the name "Email Save", "COVINO & Partners", the logo or other signs
+   of the Licensor in a way that suggests affiliation or endorsement.
+
+4. Visible code is not free code
+   The code may be made available for reading (for example on GitHub) for transparency. Being able to read it grants no right
+   beyond those in section 2: it is not open-source software.
+
+5. Third-party components and trademarks
+   The Add-in includes third-party libraries, in particular @azure/msal-browser and @azure/msal-common by Microsoft Corporation
+   (MIT licence). They remain subject to their own licences, which this licence does not change. Microsoft, Outlook, SharePoint,
+   OneDrive and Microsoft 365 are trademarks of Microsoft Corporation, which is not affiliated with and does not endorse the
+   Add-in.
+
+6. No warranty
+   The Add-in is provided "as is", without warranties of any kind, express or implied, including merchantability, fitness for a
+   particular purpose, freedom from errors or continuous availability.
+
+7. Limitation of liability
+   To the extent permitted by law, the Licensor is not liable for data loss, lost profits or indirect damages arising from the
+   use of, or inability to use, the Add-in. Liability that cannot be excluded or limited by law remains unaffected.
+
+8. Term and revocation
+   The licence lasts as long as the Add-in is available and may be revoked by the Licensor, effective when announced on the
+   terms of use page. It ends automatically if you breach section 3; in that case you must stop using the Add-in.
+
+9. Related documents
+   This licence is to be read together with the Add-in's terms of use and privacy notice:
+   https://fcovino.github.io/email-save/terms.html and https://fcovino.github.io/email-save/privacy.html
+
+10. Governing law and courts
+   Italian law. Competent court: Rome (Italy), unless mandatory consumer-protection law provides otherwise.
