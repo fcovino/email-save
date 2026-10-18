@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Email Save</title>
   <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
-  <script type="module" crossorigin src="./assets/taskpane-D5M015-f.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/sites-B0Zx3g89.js">
-  <link rel="stylesheet" crossorigin href="./assets/taskpane-B7YRAUGu.css">
+  <script type="module" crossorigin src="./assets/taskpane-BquWvnOA.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/sites-sfkfR5BA.js">
+  <link rel="stylesheet" crossorigin href="./assets/taskpane-DoNrUyyV.css">
 </head>
 <body>
   <div id="app">
@@ -18,6 +18,11 @@
     <main id="view-main">
       <header>
         <h1 data-i18n="appTitle">Email Save</h1>
+        <!-- Schermata iniziale: che cosa fa il componente e che cosa serve per usarlo (account Microsoft 365 di lavoro o scuola). Testo fisso: si vede prima di ogni accesso e anche se l'accesso non riesce -->
+        <div id="intro" class="intro">
+          <p data-i18n="introValue">Salva gli allegati delle e-mail in SharePoint o OneDrive con due clic, senza scaricarli.</p>
+          <p data-i18n="introSignIn">Accedi una volta con il tuo account Microsoft 365 di lavoro o scuola: i file vanno direttamente nel tuo SharePoint o OneDrive.</p>
+        </div>
         <p id="subject" class="muted"></p>
       </header>
 

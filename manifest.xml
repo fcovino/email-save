@@ -14,7 +14,7 @@
 
   <Id>b64b22f6-9d8b-4693-acdb-cb742bc2545a</Id>
   <Version>1.3.1.0</Version>
-  <ProviderName>COVINO &amp; Partners STP s.r.l.</ProviderName>
+  <ProviderName>COVINO &amp; Partners STP</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
 
   <DisplayName DefaultValue="Email Save"/>
